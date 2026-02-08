@@ -1,6 +1,14 @@
 
 import React from 'react';
 
+const quickLinks = [
+  { name: 'Home', href: '#' },
+  { name: 'Services', href: '#services' },
+  { name: 'Meet Karina', href: '#about' },
+  { name: 'FAQs', href: '#faqs' },
+  { name: 'Contact', href: '#enquiry' },
+];
+
 const Footer: React.FC = () => {
   return (
     <footer className="py-16 md:py-32 bg-white dark:bg-[#0a0a0a] border-t border-zinc-100 dark:border-zinc-900 transition-colors" id="contact">
@@ -13,8 +21,23 @@ const Footer: React.FC = () => {
               src="/krlogo.png"
             />
             <p className="text-secondary dark:text-zinc-500 max-w-xs font-light text-base md:text-lg leading-relaxed">
-              Modern physiotherapy for the discerning individual. Dedicated to excellence in motion and the preservation of vitality.
+              All treatment is personalised and evidence-based.
             </p>
+          </div>
+
+          <div className="space-y-6 md:space-y-8">
+            <h4 className="text-[10px] uppercase tracking-[0.4em] font-bold text-primary dark:text-white">Quick Links</h4>
+            <nav className="flex flex-col space-y-3">
+              {quickLinks.map((link) => (
+                <a
+                  key={link.name}
+                  href={link.href}
+                  className="text-secondary dark:text-zinc-400 font-light text-sm hover:text-accent transition-colors"
+                >
+                  {link.name}
+                </a>
+              ))}
+            </nav>
           </div>
 
           <div className="space-y-6 md:space-y-8">
@@ -28,22 +51,6 @@ const Footer: React.FC = () => {
               </p>
               <a href="mailto:Karinaboothphysio@gmail.com" className="block hover:text-accent transition-colors break-all">Karinaboothphysio@gmail.com</a>
             </address>
-          </div>
-
-          <div className="space-y-6 md:space-y-8">
-            <h4 className="text-[10px] uppercase tracking-[0.4em] font-bold text-primary dark:text-white">Hours</h4>
-            <div className="text-secondary dark:text-zinc-400 space-y-3 md:space-y-4 font-light text-sm">
-              {[
-                { label: 'Mon — Fri', time: '08:00 - 19:00' },
-                { label: 'Sat', time: '09:00 - 14:00' },
-                { label: 'Sun', time: 'Closed' }
-              ].map((row, idx) => (
-                <div key={idx} className="flex justify-between border-b border-zinc-50 dark:border-zinc-800 pb-2">
-                  <span>{row.label}</span>
-                  <span className="font-medium">{row.time}</span>
-                </div>
-              ))}
-            </div>
           </div>
         </div>
 
@@ -65,14 +72,7 @@ const Footer: React.FC = () => {
         </div>
 
         <div className="mt-12 md:mt-16 pt-8 md:pt-10 border-t border-zinc-100 dark:border-zinc-900 flex flex-col md:flex-row justify-between items-center text-[10px] uppercase tracking-[0.3em] text-zinc-400 font-medium gap-6">
-          <p className="text-center md:text-left">© 2024 Karina Booth Physiotherapy. All Rights Reserved.</p>
-          <div className="flex space-x-8 md:space-x-12">
-            {['Privacy', 'Terms', 'Instagram'].map(item => (
-              <a key={item} href="#" className="hover:text-primary dark:hover:text-white transition-all underline-offset-4 hover:underline">
-                {item}
-              </a>
-            ))}
-          </div>
+          <p className="text-center md:text-left">© 2025 Karina Booth Physiotherapy. All Rights Reserved.</p>
         </div>
       </div>
     </footer>
@@ -80,4 +80,3 @@ const Footer: React.FC = () => {
 };
 
 export default Footer;
-

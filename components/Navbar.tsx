@@ -26,11 +26,11 @@ const Navbar: React.FC = () => {
   }, [isMobileMenuOpen]);
 
   const navLinks = [
-    { name: 'About', href: '#about' },
     { name: 'Services', href: '#services' },
-    { name: 'Philosophy', href: '#philosophy' },
+    { name: 'Meet Karina', href: '#about' },
+    { name: 'FAQs', href: '#faqs' },
     { name: 'Book', href: '#book' },
-    { name: 'Contact', href: '#contact' },
+    { name: 'Contact', href: '#enquiry' },
   ];
 
   return (

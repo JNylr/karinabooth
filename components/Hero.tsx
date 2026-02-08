@@ -7,25 +7,36 @@ const Hero: React.FC = () => {
       <div className="max-w-7xl mx-auto px-6 lg:px-12 w-full grid md:grid-cols-2 gap-16 items-center">
         <div className="space-y-10 animate-fade-in opacity-0" style={{ animationDelay: '200ms' }}>
           <h1 className="font-display text-5xl md:text-7xl lg:text-8xl leading-[1.1] text-primary dark:text-white">
-            Restoring <br />
-            <span className="italic text-zinc-400 dark:text-zinc-500">Balance</span> & <br />
-            Movement.
+            Physiotherapy <br />
+            <span className="italic text-zinc-400 dark:text-zinc-500">built around</span> <br />
+            you.
           </h1>
-          <p className="text-lg md:text-xl text-secondary dark:text-zinc-400 max-w-md font-light leading-relaxed">
-            A refined approach to physiotherapy, combining clinical excellence with a tranquil, patient-centered environment.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-6 pt-4">
+          <div className="space-y-3">
+            <p className="text-lg md:text-xl text-secondary dark:text-zinc-400 max-w-md font-light leading-relaxed">
+              Better musculoskeletal care to help you move well, recover fully, and return to the activities you love.
+            </p>
+            <p className="text-sm md:text-base text-accent font-medium tracking-wide">
+              Private, one-to-one physiotherapy in a calm home clinic setting.
+            </p>
+          </div>
+          <div className="flex flex-col sm:flex-row gap-4 pt-4">
             <a
-              href="#services"
-              className="px-10 py-5 bg-primary text-white dark:bg-white dark:text-primary text-center tracking-[0.25em] text-[10px] uppercase font-semibold hover:bg-zinc-800 dark:hover:bg-zinc-200 transition-all shadow-sm"
+              href="#book"
+              className="group px-8 py-5 bg-primary text-white dark:bg-white dark:text-primary text-center tracking-[0.2em] text-[10px] uppercase font-semibold hover:bg-zinc-800 dark:hover:bg-zinc-200 transition-all shadow-sm"
             >
-              Explore Services
+              Book Your Free Discovery Call
+              <span className="block text-[9px] tracking-[0.15em] font-normal opacity-70 mt-1 normal-case">
+                Take the first step toward pain-free movement
+              </span>
             </a>
             <a
               href="#book"
-              className="px-10 py-5 border border-zinc-300 dark:border-zinc-700 text-primary dark:text-white text-center tracking-[0.25em] text-[10px] uppercase font-semibold hover:border-primary dark:hover:border-white transition-all"
+              className="group px-8 py-5 border border-zinc-300 dark:border-zinc-700 text-primary dark:text-white text-center tracking-[0.2em] text-[10px] uppercase font-semibold hover:border-primary dark:hover:border-white transition-all"
             >
-              Book Now
+              Book Your Initial Assessment
+              <span className="block text-[9px] tracking-[0.15em] font-normal opacity-70 mt-1 normal-case">
+                Start your personalised recovery plan today
+              </span>
             </a>
           </div>
         </div>

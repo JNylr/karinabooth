@@ -2,8 +2,14 @@
 import React from 'react';
 
 const Philosophy: React.FC = () => {
+  const reasons = [
+    "Every client receives individualised, high-quality care",
+    "Rehabilitation is progressive, empowering, and results-driven",
+    "Recovery doesn't stop at pain-free — the goal is to make you strong, confident, and capable",
+  ];
+
   return (
-    <section className="relative py-48 bg-black text-white overflow-hidden" id="philosophy">
+    <section className="relative py-36 md:py-48 bg-black text-white overflow-hidden" id="philosophy">
       <div className="absolute inset-0 opacity-40 pointer-events-none scale-110">
         <img
           alt="Tranquil Yoga Pose"
@@ -13,20 +19,37 @@ const Philosophy: React.FC = () => {
       </div>
 
       <div className="relative max-w-5xl mx-auto px-6 text-center">
-        <h2 className="font-display text-4xl md:text-7xl mb-16 italic leading-tight animate-fade-in">
-          "Health is the quiet rhythm of movement and stillness in harmony."
+        <h6 className="text-[10px] uppercase tracking-[0.5em] text-accent font-bold mb-8">Why Choose Karina Booth</h6>
+        <h2 className="font-display text-4xl md:text-6xl mb-16 italic leading-tight">
+          Step beyond standard physiotherapy care.
         </h2>
 
-        <div className="flex flex-col items-center space-y-12">
-          <p className="text-zinc-400 font-light tracking-wide max-w-2xl mx-auto text-lg leading-relaxed">
-            Experience a different standard of care. Our studio is designed to be a sanctuary where science meets serenity, ensuring your path to wellness is as restorative as it is effective.
-          </p>
+        <div className="max-w-3xl mx-auto space-y-6 mb-12">
+          {reasons.map((reason, idx) => (
+            <div key={idx} className="flex items-start space-x-4 text-left">
+              <span className="material-symbols-outlined text-accent text-xl mt-1 shrink-0">verified</span>
+              <p className="text-zinc-300 font-light text-lg leading-relaxed">{reason}</p>
+            </div>
+          ))}
+        </div>
 
+        <p className="text-zinc-400 font-light tracking-wide max-w-2xl mx-auto text-lg leading-relaxed mb-16">
+          Achieve results that exceed expectations.
+        </p>
+
+        <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
           <a
             href="#book"
-            className="group flex items-center space-x-6 border border-white/20 hover:border-white px-12 py-6 transition-all duration-500 hover:bg-white hover:text-black shadow-2xl"
+            className="group flex items-center justify-center space-x-4 border border-white/20 hover:border-white px-10 py-5 transition-all duration-500 hover:bg-white hover:text-black"
           >
-            <span className="text-xs uppercase tracking-[0.4em] font-semibold">Schedule Your Initial Visit</span>
+            <span className="text-xs uppercase tracking-[0.3em] font-semibold">Book Your Free Discovery Call</span>
+            <span className="material-symbols-outlined group-hover:translate-x-2 transition-transform duration-300">arrow_forward</span>
+          </a>
+          <a
+            href="#book"
+            className="group flex items-center justify-center space-x-4 border border-white/40 hover:border-white px-10 py-5 transition-all duration-500 hover:bg-white hover:text-black"
+          >
+            <span className="text-xs uppercase tracking-[0.3em] font-semibold">Book Your Initial Assessment</span>
             <span className="material-symbols-outlined group-hover:translate-x-2 transition-transform duration-300">arrow_forward</span>
           </a>
         </div>

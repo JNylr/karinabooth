@@ -9,39 +9,49 @@ const About: React.FC = () => {
           <div className="md:col-span-5 order-2 md:order-1 relative">
             <div className="absolute -inset-4 border border-accent/20 dark:border-accent/10 pointer-events-none"></div>
             <img
-              alt="Detail of professional therapeutic touch"
+              alt="Karina Booth — Chartered Physiotherapist"
               className="w-full h-auto shadow-2xl relative z-10 filter dark:brightness-90 grayscale-[0.2]"
               src="https://lh3.googleusercontent.com/aida-public/AB6AXuDgPusz9e2KzChcDzMoeWRsGf4C5JonM5beiTp5J1mHuyi5eze6eWl6hEddNQhSBp08MgArXeAp_AH2MOpaIC9LO1JZT9lvt7bv12H2KSzSPH9i6mnpqEwhApLfqoCfwTfQThd2FmA7egX_ErycqX2sw7QN8lPnRgGohnYbUPpTATu9cUwf6ogHENk8iWtVXfahAo7X2-LDWFRtrJ6NiuCCt64dAWttjcSSBqAxM3o45ABNhU4i9vCtedYMAbfMZqEgTDzYQg9Qjg"
             />
           </div>
           <div className="md:col-span-7 order-1 md:order-2 space-y-10">
             <div className="space-y-4">
-              <h6 className="text-[10px] uppercase tracking-[0.45em] text-accent font-bold">Expertise & Background</h6>
+              <h6 className="text-[10px] uppercase tracking-[0.45em] text-accent font-bold">Expertise &amp; Background</h6>
               <h2 className="font-display text-4xl md:text-6xl text-primary dark:text-white">Meet Karina Booth</h2>
+              <p className="text-sm uppercase tracking-[0.3em] text-secondary dark:text-zinc-500 font-medium">
+                Chartered Physiotherapist · Sport &amp; Exercise Medicine · Massage Therapist
+              </p>
             </div>
 
             <div className="space-y-6 text-lg text-secondary dark:text-zinc-400 font-light leading-relaxed max-w-2xl">
               <p>
-                With over 15 years of specialised experience in musculoskeletal rehabilitation, Karina has dedicated her career to understanding the intricate nuances of human biomechanics. Her practice is built on the philosophy that every patient deserves a bespoke pathway to recovery.
+                Hi, I'm Karina Booth. I help athletes, active adults, older adults, and post-operative patients regain function, reduce pain, and return to the activities they love.
               </p>
               <p>
-                Karina's approach is not just about treating symptoms, but identifying the root cause to ensure long-term vitality and performance through science-backed methodologies.
+                I go beyond symptom relief, identifying the root cause of dysfunction with a whole-system approach. Every client receives a bespoke recovery pathway, designed to exceed expectations.
               </p>
             </div>
 
-            <ul className="grid grid-cols-1 sm:grid-cols-2 gap-6 pt-6">
-              {[
-                "Doctor of Physical Therapy (DPT)",
-                "Certified Manual Therapist",
-                "Sports Injury Specialist",
-                "Clinical Pilates Expert"
-              ].map((item, idx) => (
-                <li key={idx} className="flex items-center space-x-4 text-sm tracking-wide text-primary dark:text-zinc-300">
-                  <span className="material-symbols-outlined text-accent text-lg">verified</span>
-                  <span>{item}</span>
-                </li>
-              ))}
-            </ul>
+            <div className="flex flex-col sm:flex-row gap-4 pt-4">
+              <a
+                href="#book"
+                className="px-8 py-4 bg-primary text-white dark:bg-white dark:text-primary text-center tracking-[0.2em] text-[10px] uppercase font-semibold hover:bg-zinc-800 dark:hover:bg-zinc-200 transition-all shadow-sm"
+              >
+                Book Your Free Discovery Call
+                <span className="block text-[9px] tracking-[0.15em] font-normal opacity-70 mt-1 normal-case">
+                  Let's discuss your goals before your first appointment
+                </span>
+              </a>
+              <a
+                href="#book"
+                className="px-8 py-4 border border-zinc-300 dark:border-zinc-700 text-primary dark:text-white text-center tracking-[0.2em] text-[10px] uppercase font-semibold hover:border-primary dark:hover:border-white transition-all"
+              >
+                Book Your Initial Assessment
+                <span className="block text-[9px] tracking-[0.15em] font-normal opacity-70 mt-1 normal-case">
+                  Secure your one-to-one physiotherapy session
+                </span>
+              </a>
+            </div>
           </div>
         </div>
       </div>

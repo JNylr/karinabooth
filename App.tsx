@@ -6,6 +6,8 @@ import About from './components/About';
 import Services from './components/Services';
 import Philosophy from './components/Philosophy';
 import Booking from './components/Booking';
+import FAQ from './components/FAQ';
+import Enquiry from './components/Enquiry';
 import Footer from './components/Footer';
 import DarkModeToggle from './components/DarkModeToggle';
 
@@ -31,6 +33,8 @@ const App: React.FC = () => {
         <Services />
         <Philosophy />
         <Booking />
+        <FAQ />
+        <Enquiry />
       </main>
       <Footer />
       <DarkModeToggle isDarkMode={isDarkMode} onToggle={toggleDarkMode} />
