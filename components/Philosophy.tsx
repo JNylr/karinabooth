@@ -9,7 +9,7 @@ const Philosophy: React.FC = () => {
   ];
 
   return (
-    <section className="relative py-36 md:py-48 bg-black text-white overflow-hidden" id="philosophy">
+    <section className="relative py-20 md:py-28 bg-black text-white overflow-hidden" id="philosophy">
       <div className="absolute inset-0 opacity-40 pointer-events-none scale-110">
         <img
           alt="Tranquil Yoga Pose"

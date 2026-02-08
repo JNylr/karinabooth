@@ -53,7 +53,7 @@ const FAQ: React.FC = () => {
     const [openIndex, setOpenIndex] = useState<number | null>(null);
 
     return (
-        <section className="py-20 md:py-32 bg-white dark:bg-[#0a0a0a] transition-colors" id="faqs">
+        <section className="py-12 md:py-20 bg-white dark:bg-[#0a0a0a] transition-colors" id="faqs">
             <div className="max-w-4xl mx-auto px-6 lg:px-12">
                 <div className="text-center mb-14 md:mb-20 space-y-4">
                     <h6 className="text-[10px] uppercase tracking-[0.5em] text-accent font-bold">Common Questions</h6>

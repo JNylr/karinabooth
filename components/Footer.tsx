@@ -11,7 +11,7 @@ const quickLinks = [
 
 const Footer: React.FC = () => {
   return (
-    <footer className="py-16 md:py-32 bg-white dark:bg-[#0a0a0a] border-t border-zinc-100 dark:border-zinc-900 transition-colors" id="contact">
+    <footer className="py-12 md:py-20 bg-white dark:bg-[#0a0a0a] border-t border-zinc-100 dark:border-zinc-900 transition-colors" id="contact">
       <div className="max-w-7xl mx-auto px-6 lg:px-12">
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-12 md:gap-20">
           <div className="sm:col-span-2 space-y-6 md:space-y-10">

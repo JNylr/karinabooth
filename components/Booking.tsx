@@ -53,7 +53,7 @@ const Booking: React.FC = () => {
     };
 
     return (
-        <section className="py-20 md:py-32 bg-zinc-50 dark:bg-zinc-900 transition-colors" id="book">
+        <section className="py-12 md:py-20 bg-zinc-50 dark:bg-zinc-900 transition-colors" id="book">
             <div className="max-w-5xl mx-auto px-6 lg:px-12">
                 <div className="text-center mb-14 md:mb-20 space-y-4">
                     <h6 className="text-[10px] uppercase tracking-[0.5em] text-accent font-bold">

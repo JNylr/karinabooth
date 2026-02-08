@@ -37,15 +37,15 @@ const services: ServiceItem[] = [
 
 const Services: React.FC = () => {
   return (
-    <section className="py-32 bg-white dark:bg-[#0a0a0a]" id="services">
+    <section className="py-16 md:py-20 bg-white dark:bg-[#0a0a0a]" id="services">
       <div className="max-w-7xl mx-auto px-6 lg:px-12 text-center mb-20">
         <h6 className="text-[10px] uppercase tracking-[0.5em] text-secondary dark:text-zinc-500 mb-6 font-semibold">Therapeutic Offerings</h6>
         <h2 className="font-display text-4xl md:text-6xl text-primary dark:text-white">Specialised Services</h2>
       </div>
 
-      <div className="max-w-7xl mx-auto px-6 lg:px-12 grid sm:grid-cols-2 lg:grid-cols-3 gap-10">
+      <div className="max-w-7xl mx-auto px-6 lg:px-12 flex flex-wrap justify-center gap-10">
         {services.map((service, index) => (
-          <div key={index} className="group p-8 border border-zinc-100 dark:border-zinc-800 hover:border-accent/40 transition-all duration-300">
+          <div key={index} className="group p-8 border border-zinc-100 dark:border-zinc-800 hover:border-accent/40 transition-all duration-300 w-full sm:w-[calc(50%-1.25rem)] lg:w-[calc(33.333%-1.75rem)]">
             <span className="material-symbols-outlined text-accent text-4xl mb-6 block group-hover:scale-110 transition-transform duration-300">
               {service.icon}
             </span>
