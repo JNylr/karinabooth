@@ -29,6 +29,7 @@ const Navbar: React.FC = () => {
     { name: 'About', href: '#about' },
     { name: 'Services', href: '#services' },
     { name: 'Philosophy', href: '#philosophy' },
+    { name: 'Book', href: '#book' },
     { name: 'Contact', href: '#contact' },
   ];
 
@@ -56,7 +57,7 @@ const Navbar: React.FC = () => {
               </a>
             ))}
             <a
-              href="#"
+              href="#book"
               className="px-6 py-3 bg-primary text-white dark:bg-white dark:text-primary text-[11px] uppercase tracking-[0.2em] font-medium hover:opacity-90 transition-opacity"
             >
               Book Appointment
@@ -90,7 +91,7 @@ const Navbar: React.FC = () => {
             </a>
           ))}
           <a
-            href="#"
+            href="#book"
             onClick={() => setIsMobileMenuOpen(false)}
             className="mt-4 px-10 py-5 bg-primary text-white dark:bg-white dark:text-primary text-xs uppercase tracking-[0.3em] font-medium hover:opacity-90 transition-opacity"
           >

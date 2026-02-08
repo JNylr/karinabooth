@@ -5,6 +5,7 @@ import Hero from './components/Hero';
 import About from './components/About';
 import Services from './components/Services';
 import Philosophy from './components/Philosophy';
+import Booking from './components/Booking';
 import Footer from './components/Footer';
 import DarkModeToggle from './components/DarkModeToggle';
 
@@ -29,6 +30,7 @@ const App: React.FC = () => {
         <About />
         <Services />
         <Philosophy />
+        <Booking />
       </main>
       <Footer />
       <DarkModeToggle isDarkMode={isDarkMode} onToggle={toggleDarkMode} />

@@ -21,11 +21,12 @@ const Footer: React.FC = () => {
             <h4 className="text-[10px] uppercase tracking-[0.4em] font-bold text-primary dark:text-white">Contact</h4>
             <address className="not-italic text-secondary dark:text-zinc-400 space-y-4 md:space-y-6 font-light text-sm md:text-base">
               <p className="leading-relaxed">
+                Nunthorpe Close<br />
                 Hatfield<br />
-                Doncaster
+                Doncaster<br />
+                DN7 6JF
               </p>
-              <p className="hover:text-accent transition-colors">+44 (0) 20 7946 0000</p>
-              <p className="hover:text-accent transition-colors break-all">hello@karinabooth.com</p>
+              <a href="mailto:Karinaboothphysio@gmail.com" className="block hover:text-accent transition-colors break-all">Karinaboothphysio@gmail.com</a>
             </address>
           </div>
 
@@ -46,7 +47,24 @@ const Footer: React.FC = () => {
           </div>
         </div>
 
-        <div className="mt-16 md:mt-32 pt-8 md:pt-10 border-t border-zinc-100 dark:border-zinc-900 flex flex-col md:flex-row justify-between items-center text-[10px] uppercase tracking-[0.3em] text-zinc-400 font-medium gap-6">
+        {/* Accreditations */}
+        <div className="mt-16 md:mt-24 pt-8 md:pt-10 border-t border-zinc-100 dark:border-zinc-900">
+          <h4 className="text-[10px] uppercase tracking-[0.4em] font-bold text-primary dark:text-white mb-6 text-center">Accredited &amp; Registered</h4>
+          <div className="flex items-center justify-center gap-10 md:gap-16 flex-wrap">
+            <img
+              alt="Chartered Society of Physiotherapy"
+              className="h-12 md:h-14 w-auto object-contain opacity-80 hover:opacity-100 transition-opacity dark:brightness-0 dark:invert"
+              src="/chartso.png"
+            />
+            <img
+              alt="Health &amp; Care Professions Council"
+              className="h-12 md:h-14 w-auto object-contain opacity-80 hover:opacity-100 transition-opacity dark:brightness-0 dark:invert"
+              src="/healthc.png"
+            />
+          </div>
+        </div>
+
+        <div className="mt-12 md:mt-16 pt-8 md:pt-10 border-t border-zinc-100 dark:border-zinc-900 flex flex-col md:flex-row justify-between items-center text-[10px] uppercase tracking-[0.3em] text-zinc-400 font-medium gap-6">
           <p className="text-center md:text-left">© 2024 Karina Booth Physiotherapy. All Rights Reserved.</p>
           <div className="flex space-x-8 md:space-x-12">
             {['Privacy', 'Terms', 'Instagram'].map(item => (

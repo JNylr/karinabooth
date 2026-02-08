@@ -15,27 +15,27 @@ const Hero: React.FC = () => {
             A refined approach to physiotherapy, combining clinical excellence with a tranquil, patient-centered environment.
           </p>
           <div className="flex flex-col sm:flex-row gap-6 pt-4">
-            <a 
-              href="#services" 
+            <a
+              href="#services"
               className="px-10 py-5 bg-primary text-white dark:bg-white dark:text-primary text-center tracking-[0.25em] text-[10px] uppercase font-semibold hover:bg-zinc-800 dark:hover:bg-zinc-200 transition-all shadow-sm"
             >
               Explore Services
             </a>
-            <a 
-              href="#contact" 
+            <a
+              href="#book"
               className="px-10 py-5 border border-zinc-300 dark:border-zinc-700 text-primary dark:text-white text-center tracking-[0.25em] text-[10px] uppercase font-semibold hover:border-primary dark:hover:border-white transition-all"
             >
-              Consultation
+              Book Now
             </a>
           </div>
         </div>
 
         <div className="relative group animate-fade-in opacity-0" style={{ animationDelay: '400ms' }}>
           <div className="aspect-[4/5] bg-zinc-100 dark:bg-zinc-900 overflow-hidden shadow-2xl">
-            <img 
-              alt="Sophisticated clinic space" 
-              className="w-full h-full object-cover opacity-95 group-hover:scale-105 transition-transform duration-[2000ms] ease-out" 
-              src="https://lh3.googleusercontent.com/aida-public/AB6AXuB4kCx-Dinv2LyTOZAgoBmOleih5vb2vziIjHJzE3FWdM-AOLMuWty9koSft-Zu0ABlZneGt7ed_IQWxhG8sNo0NZf9EUS2_CYYzyrqV6JzlnQravEYI7TTrXsAiowQlwFqaf0RCpZPaJYIm8ME4nGPjILMv86CoWvEExxo6KAu50wfs5TYlZcJ8O749GUMmzJAEdzL86-pK95-mc5wbEiG3NPm7HnNEvNGBQ3kwkl4Jv-2EpN-d7cYJXpBBTDTqUuaIIaNylZsaQ" 
+            <img
+              alt="Sophisticated clinic space"
+              className="w-full h-full object-cover opacity-95 group-hover:scale-105 transition-transform duration-[2000ms] ease-out"
+              src="https://lh3.googleusercontent.com/aida-public/AB6AXuB4kCx-Dinv2LyTOZAgoBmOleih5vb2vziIjHJzE3FWdM-AOLMuWty9koSft-Zu0ABlZneGt7ed_IQWxhG8sNo0NZf9EUS2_CYYzyrqV6JzlnQravEYI7TTrXsAiowQlwFqaf0RCpZPaJYIm8ME4nGPjILMv86CoWvEExxo6KAu50wfs5TYlZcJ8O749GUMmzJAEdzL86-pK95-mc5wbEiG3NPm7HnNEvNGBQ3kwkl4Jv-2EpN-d7cYJXpBBTDTqUuaIIaNylZsaQ"
             />
           </div>
           <div className="absolute -bottom-8 -left-8 bg-white dark:bg-zinc-900 p-10 shadow-2xl hidden lg:block border border-zinc-100 dark:border-zinc-800">
