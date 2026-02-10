@@ -130,18 +130,7 @@ const Enquiry: React.FC = () => {
                         </div>
 
                         <div className="flex flex-col gap-3">
-                            <a
-                                href="#book"
-                                className="px-6 py-3.5 bg-primary text-white dark:bg-white dark:text-primary text-center tracking-[0.2em] text-[10px] uppercase font-semibold hover:bg-zinc-800 dark:hover:bg-zinc-200 transition-all shadow-sm"
-                            >
-                                Book Your Free Discovery Call
-                            </a>
-                            <a
-                                href="#book"
-                                className="px-6 py-3.5 border border-zinc-300 dark:border-zinc-700 text-primary dark:text-white text-center tracking-[0.2em] text-[10px] uppercase font-semibold hover:border-primary dark:hover:border-white transition-all"
-                            >
-                                Book Your Initial Assessment
-                            </a>
+
                         </div>
                     </div>
                 </div>

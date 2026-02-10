@@ -21,11 +21,7 @@ const faqs: FAQItem[] = [
     },
     {
         question: "How long is each appointment?",
-        answer: "Most sessions last between 45–60 minutes, giving enough time for assessment, treatment, and guidance.",
-    },
-    {
-        question: "Is this suitable for athletes?",
-        answer: "Yes. I work with athletes of all levels as well as active adults and older adults, helping you recover safely and return to your activities stronger and more confident.",
+        answer: "Initial assessments are 45 minutes. Treatment sessions are 30 minutes.",
     },
     {
         question: "Do you offer massage therapy?",
@@ -34,6 +30,14 @@ const faqs: FAQItem[] = [
     {
         question: "Can I have ongoing treatment if needed?",
         answer: "Absolutely. Your recovery plan may include multiple sessions, tailored to your progress, to help you exceed your goals.",
+    },
+    {
+        question: "Is there parking on site?",
+        answer: "There is parking directly outside the property or you can park on the driveway.",
+    },
+    {
+        question: "How much will it cost?",
+        answer: "Initial assessment:\n• 45 minutes £60\n• 60 minutes £80\n\nFollow up treatment session:\n• 30 minutes £50\n• 60 minutes £75\n\nSports massage:\n• 30 minutes £40\n• 45 minutes £50",
     },
     {
         question: "Where are the appointments held?",
@@ -80,9 +84,9 @@ const FAQ: React.FC = () => {
                                 <div
                                     className={`overflow-hidden transition-all duration-300 ease-in-out ${isOpen ? 'max-h-60 opacity-100 pb-6' : 'max-h-0 opacity-0'}`}
                                 >
-                                    <p className="text-secondary dark:text-zinc-400 font-light leading-relaxed text-base pr-8">
+                                    <div className="text-secondary dark:text-zinc-400 font-light leading-relaxed text-base pr-8 whitespace-pre-line">
                                         {faq.answer}
-                                    </p>
+                                    </div>
                                 </div>
                             </div>
                         );
@@ -90,26 +94,7 @@ const FAQ: React.FC = () => {
                 </div>
 
                 {/* CTAs */}
-                <div className="mt-16 flex flex-col sm:flex-row gap-4 justify-center">
-                    <a
-                        href="#book"
-                        className="px-8 py-5 bg-primary text-white dark:bg-white dark:text-primary text-center tracking-[0.2em] text-[10px] uppercase font-semibold hover:bg-zinc-800 dark:hover:bg-zinc-200 transition-all shadow-sm"
-                    >
-                        Book Your Free Discovery Call
-                        <span className="block text-[9px] tracking-[0.15em] font-normal opacity-70 mt-1 normal-case">
-                            Not sure which service is right? Let's chat first
-                        </span>
-                    </a>
-                    <a
-                        href="#book"
-                        className="px-8 py-5 border border-zinc-300 dark:border-zinc-700 text-primary dark:text-white text-center tracking-[0.2em] text-[10px] uppercase font-semibold hover:border-primary dark:hover:border-white transition-all"
-                    >
-                        Book Your Initial Assessment
-                        <span className="block text-[9px] tracking-[0.15em] font-normal opacity-70 mt-1 normal-case">
-                            Ready to start your tailored recovery plan?
-                        </span>
-                    </a>
-                </div>
+
             </div>
         </section>
     );

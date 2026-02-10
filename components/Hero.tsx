@@ -13,7 +13,7 @@ const Hero: React.FC = () => {
           </h1>
           <div className="space-y-4">
             <p className="text-lg md:text-xl text-secondary dark:text-zinc-400 max-w-md font-light leading-relaxed">
-              Better musculoskeletal care to help you move well, recover fully, and return to the activities you love.
+              At the heart of this practice is one simple belief: you deserve better care, better outcomes, and a recovery plan built entirely around you.
             </p>
             <p className="text-sm md:text-base text-accent font-medium tracking-wide">
               Private, one-to-one physiotherapy in a calm home clinic setting.

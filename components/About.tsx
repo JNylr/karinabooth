@@ -16,42 +16,56 @@ const About: React.FC = () => {
           </div>
           <div className="md:col-span-7 order-1 md:order-2 space-y-10">
             <div className="space-y-4">
-              <h6 className="text-[10px] uppercase tracking-[0.45em] text-accent font-bold">Expertise &amp; Background</h6>
               <h2 className="font-display text-4xl md:text-6xl text-primary dark:text-white">Meet Karina Booth</h2>
-              <p className="text-sm uppercase tracking-[0.3em] text-secondary dark:text-zinc-500 font-medium">
-                Chartered Physiotherapist · Sport &amp; Exercise Medicine · Massage Therapist
-              </p>
+              <div className="flex flex-wrap gap-2 text-sm uppercase tracking-[0.2em] text-secondary dark:text-zinc-500 font-medium items-center">
+                <span>Chartered Physiotherapist</span>
+                <span className="hidden sm:inline">|</span>
+                <span>Sport & Exercise Medicine</span>
+                <span className="hidden sm:inline">|</span>
+                <span>Massage Therapist</span>
+              </div>
             </div>
 
             <div className="space-y-6 text-lg text-secondary dark:text-zinc-400 font-light leading-relaxed max-w-2xl">
               <p>
-                Hi, I'm Karina Booth. I help athletes, active adults, older adults, and post-operative patients regain function, reduce pain, and return to the activities they love.
+                Hi, I’m Karina Booth, a Chartered Physiotherapist with a Master’s degree in Physiotherapy (Sport and Exercise Medicine) and a background in massage therapy. I have worked predominantly in the private sector, gaining extensive experience across a wide range of musculoskeletal conditions and patient populations.
               </p>
               <p>
-                I go beyond symptom relief, identifying the root cause of dysfunction with a whole-system approach. Every client receives a bespoke recovery pathway, designed to exceed expectations.
+                From recreationally active individuals, athletes, older adults, post-operative patients, and those living with persistent pain, my focus has always been the same:
               </p>
+              <p className="font-medium text-primary dark:text-white">
+                Help people get back to doing the things they love, and often exceeding what they thought was possible.
+              </p>
+              <p>
+                My approach goes far beyond symptom relief.
+              </p>
+              <p>
+                Rather than simply treating where it hurts, I focus on identifying the root cause of your symptoms, using a whole-system, whole-body approach. This means understanding how movement patterns, strength, mobility, and previous injuries contribute to pain and dysfunction.
+              </p>
+              <p>
+                Every client who walks through my door receives a bespoke pathway to recovery, built around:
+              </p>
+              <ul className="space-y-3 mt-4">
+                <li className="flex items-center gap-3">
+                  <span className="w-1.5 h-1.5 rounded-full bg-accent"></span>
+                  Clinical excellence
+                </li>
+                <li className="flex items-center gap-3">
+                  <span className="w-1.5 h-1.5 rounded-full bg-accent"></span>
+                  Long-term health and wellness
+                </li>
+                <li className="flex items-center gap-3">
+                  <span className="w-1.5 h-1.5 rounded-full bg-accent"></span>
+                  Treating the whole person, not just the injury
+                </li>
+                <li className="flex items-center gap-3">
+                  <span className="w-1.5 h-1.5 rounded-full bg-accent"></span>
+                  Progressing you beyond baseline — not just “back to normal”
+                </li>
+              </ul>
             </div>
 
-            <div className="flex flex-col sm:flex-row gap-4 pt-4">
-              <a
-                href="#book"
-                className="px-8 py-4 bg-primary text-white dark:bg-white dark:text-primary text-center tracking-[0.2em] text-[10px] uppercase font-semibold hover:bg-zinc-800 dark:hover:bg-zinc-200 transition-all shadow-sm"
-              >
-                Book Your Free Discovery Call
-                <span className="block text-[9px] tracking-[0.15em] font-normal opacity-70 mt-1 normal-case">
-                  Let's discuss your goals before your first appointment
-                </span>
-              </a>
-              <a
-                href="#book"
-                className="px-8 py-4 border border-zinc-300 dark:border-zinc-700 text-primary dark:text-white text-center tracking-[0.2em] text-[10px] uppercase font-semibold hover:border-primary dark:hover:border-white transition-all"
-              >
-                Book Your Initial Assessment
-                <span className="block text-[9px] tracking-[0.15em] font-normal opacity-70 mt-1 normal-case">
-                  Secure your one-to-one physiotherapy session
-                </span>
-              </a>
-            </div>
+
           </div>
         </div>
       </div>

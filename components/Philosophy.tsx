@@ -34,25 +34,10 @@ const Philosophy: React.FC = () => {
         </div>
 
         <p className="text-zinc-400 font-light tracking-wide max-w-2xl mx-auto text-lg leading-relaxed mb-16">
-          Achieve results that exceed expectations.
+          My mission is to level up rehabilitation, elevate standards of care, and help clients excel in their recovery and exceed their expectations.
         </p>
 
-        <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-          <a
-            href="#book"
-            className="group flex items-center justify-center space-x-4 border border-white/20 hover:border-white px-10 py-5 transition-all duration-500 hover:bg-white hover:text-black"
-          >
-            <span className="text-xs uppercase tracking-[0.3em] font-semibold">Book Your Free Discovery Call</span>
-            <span className="material-symbols-outlined group-hover:translate-x-2 transition-transform duration-300">arrow_forward</span>
-          </a>
-          <a
-            href="#book"
-            className="group flex items-center justify-center space-x-4 border border-white/40 hover:border-white px-10 py-5 transition-all duration-500 hover:bg-white hover:text-black"
-          >
-            <span className="text-xs uppercase tracking-[0.3em] font-semibold">Book Your Initial Assessment</span>
-            <span className="material-symbols-outlined group-hover:translate-x-2 transition-transform duration-300">arrow_forward</span>
-          </a>
-        </div>
+
       </div>
     </section>
   );

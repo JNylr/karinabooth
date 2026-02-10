@@ -20,9 +20,7 @@ const Footer: React.FC = () => {
               className="h-12 md:h-16 w-auto dark:invert opacity-90"
               src="/krlogo.png"
             />
-            <p className="text-secondary dark:text-zinc-500 max-w-xs font-light text-base md:text-lg leading-relaxed">
-              All treatment is personalised and evidence-based.
-            </p>
+
           </div>
 
           <div className="space-y-6 md:space-y-8">
