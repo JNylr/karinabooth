@@ -82,7 +82,7 @@ const FAQ: React.FC = () => {
                                     </span>
                                 </button>
                                 <div
-                                    className={`overflow-hidden transition-all duration-300 ease-in-out ${isOpen ? 'max-h-60 opacity-100 pb-6' : 'max-h-0 opacity-0'}`}
+                                    className={`overflow-hidden transition-all duration-300 ease-in-out ${isOpen ? 'max-h-96 opacity-100 pb-6' : 'max-h-0 opacity-0'}`}
                                 >
                                     <div className="text-secondary dark:text-zinc-400 font-light leading-relaxed text-base pr-8 whitespace-pre-line">
                                         {faq.answer}
