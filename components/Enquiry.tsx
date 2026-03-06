@@ -1,22 +1,49 @@
 
 import React, { useState } from 'react';
 
+const API_URL = 'https://chat-production-10f8.up.railway.app/contacts';
+
 const Enquiry: React.FC = () => {
     const [formData, setFormData] = useState({
-        name: '',
+        firstName: '',
+        lastName: '',
         email: '',
-        phone: '',
-        description: '',
+        subject: '',
+        message: '',
     });
     const [submitted, setSubmitted] = useState(false);
+    const [isSubmitting, setIsSubmitting] = useState(false);
+    const [error, setError] = useState<string | null>(null);
 
-    const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+    const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
         setFormData(prev => ({ ...prev, [e.target.name]: e.target.value }));
     };
 
-    const handleSubmit = (e: React.FormEvent) => {
+    const handleSubmit = async (e: React.FormEvent) => {
         e.preventDefault();
-        setSubmitted(true);
+        setIsSubmitting(true);
+        setError(null);
+
+        try {
+            const res = await fetch(API_URL, {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({
+                    ...formData,
+                    companyToken: '36989633-5d60-42c3-887f-590a54a383c3',
+                }),
+            });
+
+            if (!res.ok) {
+                throw new Error('Something went wrong. Please try again.');
+            }
+
+            setSubmitted(true);
+        } catch (err: any) {
+            setError(err.message || 'Something went wrong. Please try again.');
+        } finally {
+            setIsSubmitting(false);
+        }
     };
 
     return (
@@ -50,14 +77,25 @@ const Enquiry: React.FC = () => {
                                 </p>
 
                                 <div className="space-y-4">
-                                    <div>
-                                        <label htmlFor="name" className="block text-[10px] uppercase tracking-[0.3em] text-primary dark:text-zinc-300 font-semibold mb-1.5">Full Name</label>
-                                        <input
-                                            id="name" name="name" type="text" required
-                                            value={formData.name} onChange={handleChange}
-                                            className="w-full border border-zinc-200 dark:border-zinc-700 bg-transparent px-4 py-2.5 text-primary dark:text-white text-sm font-light focus:border-accent focus:ring-0 focus:outline-none transition-colors"
-                                            placeholder="Your full name"
-                                        />
+                                    <div className="grid grid-cols-2 gap-4">
+                                        <div>
+                                            <label htmlFor="firstName" className="block text-[10px] uppercase tracking-[0.3em] text-primary dark:text-zinc-300 font-semibold mb-1.5">First Name</label>
+                                            <input
+                                                id="firstName" name="firstName" type="text" required
+                                                value={formData.firstName} onChange={handleChange}
+                                                className="w-full border border-zinc-200 dark:border-zinc-700 bg-transparent px-4 py-2.5 text-primary dark:text-white text-sm font-light focus:border-accent focus:ring-0 focus:outline-none transition-colors"
+                                                placeholder="First name"
+                                            />
+                                        </div>
+                                        <div>
+                                            <label htmlFor="lastName" className="block text-[10px] uppercase tracking-[0.3em] text-primary dark:text-zinc-300 font-semibold mb-1.5">Last Name</label>
+                                            <input
+                                                id="lastName" name="lastName" type="text" required
+                                                value={formData.lastName} onChange={handleChange}
+                                                className="w-full border border-zinc-200 dark:border-zinc-700 bg-transparent px-4 py-2.5 text-primary dark:text-white text-sm font-light focus:border-accent focus:ring-0 focus:outline-none transition-colors"
+                                                placeholder="Last name"
+                                            />
+                                        </div>
                                     </div>
                                     <div>
                                         <label htmlFor="email" className="block text-[10px] uppercase tracking-[0.3em] text-primary dark:text-zinc-300 font-semibold mb-1.5">Email Address</label>
@@ -69,30 +107,43 @@ const Enquiry: React.FC = () => {
                                         />
                                     </div>
                                     <div>
-                                        <label htmlFor="phone" className="block text-[10px] uppercase tracking-[0.3em] text-primary dark:text-zinc-300 font-semibold mb-1.5">Phone Number</label>
-                                        <input
-                                            id="phone" name="phone" type="tel"
-                                            value={formData.phone} onChange={handleChange}
+                                        <label htmlFor="subject" className="block text-[10px] uppercase tracking-[0.3em] text-primary dark:text-zinc-300 font-semibold mb-1.5">Subject</label>
+                                        <select
+                                            id="subject" name="subject" required
+                                            value={formData.subject} onChange={handleChange}
                                             className="w-full border border-zinc-200 dark:border-zinc-700 bg-transparent px-4 py-2.5 text-primary dark:text-white text-sm font-light focus:border-accent focus:ring-0 focus:outline-none transition-colors"
-                                            placeholder="07XXX XXXXXX"
-                                        />
+                                        >
+                                            <option value="" disabled>Select a subject...</option>
+                                            <option value="General Enquiry">General Enquiry</option>
+                                            <option value="Physiotherapy Consultation">Physiotherapy Consultation</option>
+                                            <option value="Sports Injury">Sports Injury</option>
+                                            <option value="Post-Operative Recovery">Post-Operative Recovery</option>
+                                            <option value="Persistent Pain">Persistent Pain</option>
+                                            <option value="Free Discovery Call">Free Discovery Call</option>
+                                            <option value="Other">Other</option>
+                                        </select>
                                     </div>
                                     <div>
-                                        <label htmlFor="description" className="block text-[10px] uppercase tracking-[0.3em] text-primary dark:text-zinc-300 font-semibold mb-1.5">Brief Description</label>
+                                        <label htmlFor="message" className="block text-[10px] uppercase tracking-[0.3em] text-primary dark:text-zinc-300 font-semibold mb-1.5">Message</label>
                                         <textarea
-                                            id="description" name="description" required rows={3}
-                                            value={formData.description} onChange={handleChange}
+                                            id="message" name="message" required rows={3}
+                                            value={formData.message} onChange={handleChange}
                                             className="w-full border border-zinc-200 dark:border-zinc-700 bg-transparent px-4 py-2.5 text-primary dark:text-white text-sm font-light focus:border-accent focus:ring-0 focus:outline-none transition-colors resize-none"
                                             placeholder="Tell us briefly about your concern..."
                                         />
                                     </div>
                                 </div>
 
+                                {error && (
+                                    <p className="text-red-500 dark:text-red-400 text-xs font-light">{error}</p>
+                                )}
+
                                 <button
                                     type="submit"
-                                    className="w-full py-3.5 bg-primary text-white dark:bg-white dark:text-primary text-[10px] uppercase tracking-[0.25em] font-semibold hover:bg-zinc-800 dark:hover:bg-zinc-200 transition-all shadow-sm"
+                                    disabled={isSubmitting}
+                                    className="w-full py-3.5 bg-primary text-white dark:bg-white dark:text-primary text-[10px] uppercase tracking-[0.25em] font-semibold hover:bg-zinc-800 dark:hover:bg-zinc-200 transition-all shadow-sm disabled:opacity-50 disabled:cursor-not-allowed"
                                 >
-                                    Submit Enquiry
+                                    {isSubmitting ? 'Submitting...' : 'Submit Enquiry'}
                                 </button>
                             </form>
                         )}
